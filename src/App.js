@@ -1,5 +1,5 @@
 import './App.css';
-import Card from './component/Card'
+import UserList from './component/UserList';
 import UserForm from './component/UserForm'
 import { useState } from 'react'
 
@@ -22,16 +22,8 @@ function App() {
 
   return (
     <div className="App">
-      <Card>
         <UserForm showUserData={handleUserData}/>
-        </Card>
-      <Card>
-      {
-        userData.map((person) => {
-          return <p key={person.id}>{person.name + ' (' + person.age + ' years old)'}</p>
-        })
-      }
-      </Card>
+        <UserList users={userData}/>
     </div>
   );
 }
