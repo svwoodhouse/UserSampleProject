@@ -1,0 +1,14 @@
+.userInput {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+}
+
+.button {
+    background: darkblue;
+    color: white;
+    border-color: darkblue;
+    height: calc(10px + 2vmin);
+    width: 10rem;
+    font-size: calc(3px + 2vmin);
+}
