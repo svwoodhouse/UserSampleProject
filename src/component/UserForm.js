@@ -2,7 +2,7 @@ import { useState } from 'react'
 import styles from './UserForm.module.css'
 import Card from './Card'
 import Button from './Button'
-import ErrorModule from './ErrorModal'
+import ErrorModal from './ErrorModal'
 const UserForm = (props) => {
     const [userName, setUserName] = useState('')
     const [userAge, setUserAge] = useState(0)
@@ -26,7 +26,7 @@ const UserForm = (props) => {
 
     return (
         <div>
-            {error && <ErrorModule title={error.title} message={error.message} onConfirm={errorHandler}/>}
+            {error && <ErrorModal title={error.title} message={error.message} onConfirm={errorHandler}/>}
             <Card className={styles.input}>
                 <form onSubmit={clickHandler}>
                     <div>
