@@ -5,9 +5,12 @@ import Button from './Button'
 import ErrorModal from './ErrorModal'
 const UserForm = (props) => {
     // We can use refs to get the value from the input instead of storing it in the state
+    // This is an example of uncontrolled components because the internal state is not controlled
+    // by react. 
     const nameInputRef = useRef()
     const ageInputRef = useRef()
 
+    //This is an example of a controlled component since we are using React to manage the internal state
     const [userName, setUserName] = useState('')
     const [userAge, setUserAge] = useState(0)
     const [error, setError] = useState()
